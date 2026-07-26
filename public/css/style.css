@@ -1,0 +1,166 @@
+/* ==========================
+   Global
+========================== */
+
+body{
+    background:#f4f7fc;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    color:#333;
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+    background:linear-gradient(90deg,#0d6efd,#084298);
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.navbar .btn{
+    border-radius:30px;
+}
+
+/* ==========================
+   Welcome Banner
+========================== */
+
+.alert{
+    border:none;
+    border-radius:15px;
+}
+
+.alert h3{
+    font-weight:bold;
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.card{
+    border:none;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
+
+.card-body i{
+    font-size:45px;
+}
+
+/* ==========================
+   Dashboard Numbers
+========================== */
+
+.card h2{
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+/* ==========================
+   Search
+========================== */
+
+.input-group input{
+    border-radius:10px 0 0 10px;
+    height:48px;
+}
+
+.input-group button{
+    border-radius:0 10px 10px 0;
+}
+
+/* ==========================
+   Employee Table
+========================== */
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead{
+    font-size:15px;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.table tbody tr:hover{
+    background:#eef5ff;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   Badges
+========================== */
+
+.badge{
+    padding:8px 12px;
+    font-size:13px;
+    border-radius:30px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer{
+
+    margin-top:50px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.card{
+
+margin-bottom:20px;
+
+}
+
+table{
+
+font-size:13px;
+
+}
+
+.navbar-brand{
+
+font-size:20px;
+
+}
+
+}

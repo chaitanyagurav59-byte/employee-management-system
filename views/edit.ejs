@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Employee</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            <i class="bi bi-buildings-fill"></i>
+            EmployeeMS
+        </a>
+
+        <a href="/" class="btn btn-light">
+            <i class="bi bi-arrow-left-circle"></i>
+            Dashboard
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-warning">
+
+                    <h3 class="mb-0 text-dark">
+
+                        <i class="bi bi-pencil-square"></i>
+
+                        Edit Employee
+
+                    </h3>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form action="/edit/<%= employee.id %>?_method=PUT" method="POST">
+
+                        <!-- Name & Email -->
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Full Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form-control"
+                                    value="<%= employee.name %>"
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Email Address
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    value="<%= employee.email %>"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Phone & Department -->
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Phone Number
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    class="form-control"
+                                    value="<%= employee.phone %>"
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Department
+
+                                </label>
+
+                                <select
+                                    name="department"
+                                    class="form-select"
+                                    required>
+
+                                    <option value="IT" <%= employee.department==="IT" ? "selected" : "" %>>IT</option>
+
+                                    <option value="HR" <%= employee.department==="HR" ? "selected" : "" %>>HR</option>
+
+                                    <option value="Finance" <%= employee.department==="Finance" ? "selected" : "" %>>Finance</option>
+
+                                    <option value="Marketing" <%= employee.department==="Marketing" ? "selected" : "" %>>Marketing</option>
+
+                                    <option value="Sales" <%= employee.department==="Sales" ? "selected" : "" %>>Sales</option>
+
+                                    <option value="Operations" <%= employee.department==="Operations" ? "selected" : "" %>>Operations</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Position & Salary -->
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Position
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="position"
+                                    class="form-control"
+                                    value="<%= employee.position %>"
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Salary (₹)
+
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        ₹
+
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        name="salary"
+                                        class="form-control"
+                                        value="<%= employee.salary %>"
+                                        min="0"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Joining Date & Status -->
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Joining Date
+
+                                </label>
+
+                                <input
+                                    type="date"
+                                    name="joiningDate"
+                                    class="form-control"
+                                    value="<%= employee.joiningDate %>"
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+
+                                    Employment Status
+
+                                </label>
+
+                                <select
+                                    name="status"
+                                    class="form-select"
+                                    required>
+
+                                    <option value="Active" <%= employee.status==="Active" ? "selected" : "" %>>
+
+                                        Active
+
+                                    </option>
+
+                                    <option value="On Leave" <%= employee.status==="On Leave" ? "selected" : "" %>>
+
+                                        On Leave
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="text-center">
+
+                            <button
+                                type="submit"
+                                class="btn btn-warning btn-lg">
+
+                                <i class="bi bi-save"></i>
+
+                                Update Employee
+
+                            </button>
+
+                            <a
+                                href="/"
+                                class="btn btn-secondary btn-lg ms-2">
+
+                                Cancel
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer mt-5">
+
+    <h5>Employee Management System</h5>
+
+    <p>
+
+        Powered by Node.js • Express • AWS EC2 • CodePipeline
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>
