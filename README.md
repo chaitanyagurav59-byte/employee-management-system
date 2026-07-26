@@ -79,29 +79,7 @@ Columns:
 
 ## Screenshots
 
-### Home Page
 
-![Home](screenshots/home.png)
-
-### Add Employee
-
-![Add Employee](screenshots/add-employee.png)
-
-### Edit Employee
-
-![Edit Employee](screenshots/edit-employee.png)
-
-### Search Employee
-
-![Search](screenshots/search.png)
-
-### Admin Page
-
-![Admin](screenshots/admin.png)
-
-### PostgreSQL Database
-
-![PostgreSQL](screenshots/postgresql.png)
 
 ---
 
